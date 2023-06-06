@@ -1,0 +1,25 @@
+body {
+    font-family: "Montserrat";
+    background-color: #9dcad8;
+}
+.header {
+    width: 100%;
+    background-color: #abd4e1;
+    box-shadow: 0px 10px 16px grey;
+}
+.heading {
+    letter-spacing: 5px;
+}
+.split {
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}

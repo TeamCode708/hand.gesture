@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Hand Gesture Recognition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <center>
+        <div class="btn header">
+            <h1 class="heading">
+                Hand Gesture Recognition
+                <br>
+                <span>&#129305;</span>
+                <span>&#128077;</span>
+                <span>&#128076;</span>
+                <span>&#9996;</span>
+            </h1>
+        </div>
+        <br><br>
+        <h4><b>NOTE: </b>This web-app is trained only to detect 4 hand gestures - </h4>
+        <h2 class="btn btn-warning">Loose | Thumbs Up | "OK" | Victory</h2>
+        <br><br>
+        <div class="result_holder">
+            <label>Prediction 1 - </label>
+            <p class="gesture_name" id="gestureName1"></p>
+            <p class="gesture_emoji" id="gestureEmoji1"></p>
+            <label>Prediction 2 - </label>
+            <p class="gesture_name" id="gestureName2"></p>
+            <p class="gesture_emoji" id="gestureEmoji2"></p>
+        </div>
+    </center>
+    <div class="split left">
+        <center>
+            <div class="webcam_holder">
+                <label>Live Webcam View</label>
+                <div id="camera"></div>
+                <br><br>
+                <button class="btn btn-warning" id="takeSnap" onclick="takeSnapshot()">Capture</button>
+            </div>
+        </center>
+    </div>
+    <div class="split right">
+        <center>
+            <div class="webcam_holder">
+                <label>Captured Image</label>
+                <div id="result"></div>
+                <br><br>
+                <button class="btn btn-warning" id="checkSnap" onclick="checkSnapshot()">Check Gesture</button>
+            </div>
+        </center>
+    </div>
+</html>
